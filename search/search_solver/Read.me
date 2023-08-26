@@ -1,0 +1,22 @@
+
+Search Problems:
+initial state
+actions
+transition model
+goal test
+path cost function
+
+Revised Approach:
+Start with a frontier that contains the initial state. Start with an empty explored set.
+Repeat:
+    If the frontier is empty, then no solution.
+    Remove a node from the frontier.
+    If node contains goal state, return the solution. Add the node to the explored set.
+    Expand node, add resulting nodes to the frontier if they aren't already in the frontier or the explored set.
+
+search_space:
+The `SearchSpace` class is an abstract base class that defines the structure and methods for any general search problem.
+The `Node` class represents a state within the search space, keeping track of its state, parent, and the action that led to it.
+The `MazeSearchSpace` class, inheriting from `SearchSpace`, specifically models a maze as a search problem,
+where it reads maze data from a file, identifies start and end points, and determines neighbors for a given state.
+The goal of these classes is to structure search problems in a generic way, allowing for different search strategies to be applied seamlessly.
